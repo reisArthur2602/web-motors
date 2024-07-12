@@ -1,7 +1,7 @@
-import React from 'react'
+import { createBrowserRouter } from 'react-router-dom';
+import { Layout } from './components';
+import { Home } from './pages';
 
-export const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+export const routes = createBrowserRouter([
+  { element: <Layout />, children: [{ path: '/', element: <Home /> }] },
+]);
